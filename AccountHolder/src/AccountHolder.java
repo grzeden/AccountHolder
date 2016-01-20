@@ -26,7 +26,7 @@ public class AccountHolder
 	}
 
 	/**
-	 * Instance method to add a deposit amount to the balance
+	 * Method to add a deposit amount to the balance
      * @param depositAmount
      */
 	public void deposit(double depositAmount)
@@ -36,8 +36,8 @@ public class AccountHolder
     }
 	
     /**
-     * Instance method to subtract a withdrawal  amount from the balance
-     * @param withdrawal Amount
+     * Method to subtract a withdrawal amount from the balance
+     * @param withdrawalAmount
      */
     public void withdrawal(double withdrawalAmount)
     {
@@ -60,7 +60,7 @@ public class AccountHolder
     }
 	
     /**
-     * 
+     * Method to accrue monthly interest to account balance
      */
     public void monthlyInterest()
     {
@@ -78,7 +78,7 @@ public class AccountHolder
     }
 
 	/**
-	 * 
+	 * Method
 	 */
 	@Override
 	public String toString() {
