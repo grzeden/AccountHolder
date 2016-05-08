@@ -1,0 +1,41 @@
+/* 
+ * Author: Dennis Grzegorzewski
+ * Date: 05/04/2016
+ * FileName: application.application.css
+ * Class: ITMD 510
+ * Assignment: Final Project
+ * Archive: grzegorzewskiITMD510FP.zip
+ * Due: 05/05/2016 11:59PM
+ */
+ 
+ #loginPane {
+  -fx-background-color: #eeffcc;
+}
+
+#createNewUserPane {
+  -fx-background-color: #ffccee;
+}
+
+#userPane {
+  -fx-background-color: #eeccff;
+}
+
+#clearUsersPane {
+  -fx-background-color: #ccffee;
+}
+
+#newPathPane {
+  -fx-background-color: #ffeecc;
+}
+
+#currentUsersPane {
+  -fx-background-color: #cceeff;
+}
+
+#currentGroupsPane {
+  -fx-background-color: #ddffff;
+}
+
+#currentPathsPane {
+  -fx-background-color: #ffddff;
+}

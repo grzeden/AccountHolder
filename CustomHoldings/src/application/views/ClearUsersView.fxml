@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * Author: Dennis Grzegorzewski
+ * Date: 05/04/2016
+ * FileName: application.views.ClearUsersView.fxml
+ * Class: ITMD 510
+ * Assignment: Final Project
+ * Archive: grzegorzewskiITMD510FP.zip
+ * Due: 05/05/2016 11:59PM 
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ClearUsersController">
+  <children>
+    <MenuBar id="menuBar" VBox.vgrow="NEVER">
+      <menus>
+        <Menu id="sessionMenu" disable="true" mnemonicParsing="false" text="Session">
+          <items>
+            <MenuItem id="newSessionMenuItem" mnemonicParsing="false" text="New" />
+            <MenuItem id="saveSessionMenuItem" mnemonicParsing="false" text="Save" />
+            <MenuItem id="resumeSessionMenuItem" mnemonicParsing="false" text="Resume" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem id="logoutMenuItem" mnemonicParsing="false" text="Logout" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem id="closeMenuItem" mnemonicParsing="false" text="Close" />
+          </items>
+        </Menu>
+        <Menu id="usersMenu" disable="true" mnemonicParsing="false" text="Users">
+          <items>
+            <MenuItem id="clearUsersMenuItem" mnemonicParsing="false" text="Clear Users" />
+            <MenuItem id="currentUsersMenuItem" mnemonicParsing="false" text="Current Users" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem id="logoutMenuItem" mnemonicParsing="false" text="Logout" />
+          </items>
+        </Menu>
+        <Menu id="pathsMenu" disable="true" mnemonicParsing="false" text="Paths">
+          <items>
+            <MenuItem id="newPathMenuItem" mnemonicParsing="false" text="New Path" />
+            <MenuItem id="currentPathsMenuItem" mnemonicParsing="false" text="Current Paths" />
+          </items>
+        </Menu>
+        <Menu id="groupsMenu" disable="true" mnemonicParsing="false" text="Groups">
+          <items>
+            <MenuItem id="newGroupMenuItem" mnemonicParsing="false" text="New Group" />
+            <MenuItem id="currentGroupsMenuItem" mnemonicParsing="false" text="Current Groups" />
+          </items>
+        </Menu>
+        <Menu id="helpMenu" mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem id="aboutMenuItem" mnemonicParsing="false" onAction="#about" text="About Custom Holdings" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane id="clearUsersPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label id="titleLabel" fx:id="titleLabel" alignment="CENTER" layoutX="20.0" layoutY="26.0" prefHeight="35.0" prefWidth="560.0" text="Clear Users and Grant Supervisor Privileges" textFill="#9f9f9f">
+          <font>
+            <Font size="24.0" />
+          </font>
+        </Label>
+        <TableView fx:id="unclearedUsersTable" layoutX="123.0" layoutY="76.0" prefHeight="196.0" prefWidth="355.0">
+          <columns>
+            <TableColumn fx:id="usernameCol" prefWidth="88.5" text="Username" />
+            <TableColumn fx:id="passwordCol" prefWidth="88.5" text="Password" />
+            <TableColumn fx:id="clearedCol" prefWidth="88.5" text="Cleared" />
+            <TableColumn fx:id="adminCol" prefWidth="88.5" text="Admin" />
+          </columns>
+        </TableView>
+        <Button id="saveCloseButton" fx:id="saveCloseButton" layoutX="66.0" layoutY="304.0" mnemonicParsing="false" onAction="#saveClearedUsers" text="Save/Close">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Button>
+        <Button id="clearButton" fx:id="clearButton" layoutX="268.0" layoutY="304.0" mnemonicParsing="false" onAction="#clearUser" text="Clear">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Button>
+        <Button id="adminButton" fx:id="adminButton" layoutX="424.0" layoutY="304.0" mnemonicParsing="false" onAction="#grantAdminUser" text="Admin">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
